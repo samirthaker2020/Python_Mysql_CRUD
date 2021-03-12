@@ -54,3 +54,33 @@ def remove(id):
 
 
 
+
+
+
+while True:
+    # Take input from the user
+    print("******--Select operation--******.")
+    print("1.Add customer ")
+    print("2.View all customer")
+    print("3.Delete customer")
+    print("4.Exit")
+    choice = input("Enter choice(1/2/3/4): ")
+    # Check if choice is one of the four options
+    if choice in ('1', '2', '3', '4'):
+
+
+        if choice == '1':
+            cname=input("Enter customer name:")
+            city=input("Enter customer city:")
+            addrecord(cname,city)
+        elif choice == '2':
+            viewall()
+        elif choice == '4':
+            quit()
+        elif choice == '3':
+            viewall()
+            no=input("Enter Customer ID:")
+            remove(no)
+
+    else:
+        print("Invalid Input")
