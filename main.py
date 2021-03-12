@@ -7,4 +7,10 @@ mydb= mysql.connector.connect(
 )
 
 mycursor= mydb.cursor()
-mycursor.execute("CREATE DATABASE mydatabse")
+#mycursor.execute("CREATE DATABASE mydatabase")
+
+# show if databse exsist or not
+
+mycursor.execute("SHOW DATABASES")
+for x in mycursor:
+    print(x)
